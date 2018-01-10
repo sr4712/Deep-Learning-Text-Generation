@@ -59,14 +59,6 @@ class TestModelBuilder(unittest.TestCase):
                          {'embedding_directory':'/Volumes/GLOVE/glove.6B',
                           'embedding_file':'glove.6B.50d.txt'
                           })                       
-#        self.assertTrue(np.array_equal(self.model_builder_obj.\
-#                                       x_train_all_samples,
-#                                      [[2, 7, 10, 9, 3, 0],
-#                                       [2, 4, 10, 1, 1, 8]]))
-#        self.assertTrue(np.array_equal(self.model_builder_obj.\
-#                                       y_train_all_samples,
-#                                      [[7, 10, 9, 3, 5, 0],
-#                                       [4, 10, 1, 1, 8, 10]]))
         self.assertNotEqual(self.model_builder_obj.lstm_model.__dict__,             #will NOT be equal, as the init constructor has called the fit_method, which changes the training_model attribute in LSTMModel
                          LSTMModel(
                                    self.model_builder_obj.x_train_all_samples,
