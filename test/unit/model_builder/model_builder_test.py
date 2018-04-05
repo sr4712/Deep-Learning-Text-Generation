@@ -59,7 +59,7 @@ class TestModelBuilder(unittest.TestCase):
                          {'embedding_directory':'/Volumes/GLOVE/glove.6B',
                           'embedding_file':'glove.6B.50d.txt'
                           })                       
-        self.assertNotEqual(self.model_builder_obj.lstm_model.__dict__,             #will NOT be equal, as the init constructor has called the fit_method, which changes the training_model attribute in LSTMModel
+        self.assertNotEqual(self.model_builder_obj.lstm_model.__dict__,             
                          LSTMModel(
                                    self.model_builder_obj.x_train_all_samples,
                                    self.model_builder_obj.y_train_all_samples,
