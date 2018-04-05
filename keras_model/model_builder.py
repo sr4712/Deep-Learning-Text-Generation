@@ -146,4 +146,4 @@ if __name__=='__main__':
     
     model_builder = ModelBuilder(conf,KerasTextListPreparer,LSTMModel,WordEmbedder)
     model_builder.output_model_description()
-    model_builder.save_and_session_model_info()
+    model_builder.save_model_and_session_info()
